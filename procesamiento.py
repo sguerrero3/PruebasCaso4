@@ -21,4 +21,10 @@ for i in pruebas:
 
     porcentaje.append((count_greater_than_4000/len(df))*100)
 
-print(porcentaje)
+plt.plot(pruebas, porcentaje)
+
+plt.xlabel('Numero de usuarios')
+plt.ylabel('Porcentaje de request que tiene un tiempo mayor a 4s')
+plt.title('Se ve feo')
+
+plt.show()
