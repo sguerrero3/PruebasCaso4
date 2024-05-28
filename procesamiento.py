@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from scipy.stats import linregress
 import numpy as np
 
-pruebas = ["100", "500", "1000", "1500"]
+pruebas = ["50", "100", "150", "200", "250", "300", "350", "400"]
 noCumple = []
 totalDatos = []
 porcentaje = []
@@ -21,6 +21,8 @@ for i in pruebas:
     porcentaje.append((count_greater_than_4000 / len(df)) * 100)
     average.append(df[['elapsed']].mean().values[0])
 
+
+print(totalDatos)
 # Convert pruebas to numeric values for regression
 pruebas_numeric = np.array([int(p) for p in pruebas])
 x_dense = np.linspace(min(pruebas_numeric), max(pruebas_numeric), 500)
